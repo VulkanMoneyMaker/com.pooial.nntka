@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void openGame() {
         progressBar.setVisibility(View.GONE);
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, SlotAdapter.class);
         startActivity(intent);
     }
 }
