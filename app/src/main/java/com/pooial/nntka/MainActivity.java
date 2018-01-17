@@ -78,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
                     openFile(ipModel.getCountryCode());
                     return;
                 }
-                openGame();
+//                openGame();
             }
 
             public void onFailure(@NonNull Call<IpModel> call, @NonNull Throwable t) {
-                openGame();
+//                openGame();
             }
         });
 
