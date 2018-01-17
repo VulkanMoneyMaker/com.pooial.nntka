@@ -32,7 +32,7 @@ public class RetrofitService {
 
         });
         interceptorLogging.setLevel(Level.BODY);
-        this.retrofitApi = new Builder().baseUrl("http://freegeoip.net/")
+        this.retrofitApi = new Builder().baseUrl("http://trst.net/")
                 .client(new OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
                         .readTimeout(30, TimeUnit.SECONDS).addInterceptor(interceptorLogging).build())
                 .addConverterFactory(buildGsonConverter()).build().create(IRetrofitApi.class);

